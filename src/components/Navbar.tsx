@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Flashcard Maker', path: '/flashcardmaker', icon: <BookOpen size={20} /> },
     { name: 'Image to Code', path: '/imagetocode', icon: <Image size={20} /> },
+    { name: 'Magic Gif Maker', path: '/magicgif', icon: <BookOpen size={20} /> },
   ];
 
   return (
