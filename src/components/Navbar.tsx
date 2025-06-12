@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen, Image } from 'lucide-react';
+import { Menu, X, BookOpen, Image, Mic } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +12,7 @@ const Navbar: React.FC = () => {
     { name: 'Flashcard Maker', path: '/flashcardmaker', icon: <BookOpen size={20} /> },
     { name: 'Image to Code', path: '/imagetocode', icon: <Image size={20} /> },
     { name: 'Magic Gif Maker', path: '/magicgif', icon: <BookOpen size={20} /> },
+    { name: 'Dictation App', path: '/dictation', icon: <Mic size={20} /> },
   ];
 
   return (

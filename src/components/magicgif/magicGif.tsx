@@ -15,7 +15,6 @@ const MagicGif: React.FC = () => {
     const promptInputRef = useRef<HTMLInputElement>(null);
 
     const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-    console.log(apiKey);
     if (!apiKey) {
         return (
             <div className="text-red-500 text-center">

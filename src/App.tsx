@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import FlashcardMaker from './components/flashcard/FlashcardMaker';
 import ImageToCode from './components/imagetocode/ImageToCode';
 import MagicGif from './components/magicgif/magicGif';
+import DictationApp from './components/dictation/DictationApp';
 import './App.css';
 
 const App: React.FC = () => {
@@ -20,7 +21,7 @@ const App: React.FC = () => {
               <p className="text-xl text-gray-600 mb-8">
                 Choose a tool to get started
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                   <h2 className="text-2xl font-semibold text-gray-900 mb-2">Flashcard Maker</h2>
                   <p className="text-gray-600 mb-4">Create flashcards using AI to help you learn and memorize information.</p>
@@ -42,12 +43,20 @@ const App: React.FC = () => {
                     Get Started
                   </Link>
                 </div>
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-2">Dictation App</h2>
+                  <p className="text-gray-600 mb-4">Record your voice and get polished, transcribed notes.</p>
+                  <Link to="/dictation" className="inline-block bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
           } />
           <Route path="/flashcardmaker" element={<FlashcardMaker />} />
           <Route path="/imagetocode" element={<ImageToCode />} />
           <Route path="/magicgif" element={<MagicGif />} />
+          <Route path="/dictation" element={<DictationApp />} />
         </Routes>
       </main>
     </div>

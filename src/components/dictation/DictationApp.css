@@ -1,0 +1,281 @@
+/* DictationApp.css */
+:root {
+  --background-dark: #1a1a1a;
+  --text-dark: #ffffff;
+  --primary-dark: #2a2a2a;
+  --secondary-dark: #3a3a3a;
+  --border-dark: #4a4a4a;
+
+  --background-light: #f0f2f5;
+  --text-light: #333333;
+  --primary-light: #ffffff;
+  --secondary-light: #e0e0e0;
+  --border-light: #cccccc;
+
+  --color-recording: #ff3b30;
+}
+
+.dictation-app-container {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px); /* Adjust based on your nav height */
+  font-family: 'Inter', sans-serif;
+}
+
+.light-mode .dictation-app-container {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.note-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.editor-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: inherit;
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.editor-title:focus {
+  outline: none;
+  background-color: var(--secondary-dark);
+}
+
+.light-mode .editor-title:focus {
+  background-color: var(--secondary-light);
+}
+
+.tab-navigation-container {
+    padding: 0.5rem;
+}
+
+.tab-navigation {
+    display: flex;
+    position: relative;
+    background-color: var(--secondary-dark);
+    border-radius: 8px;
+    padding: 4px;
+}
+.light-mode .tab-navigation {
+    background-color: var(--secondary-light);
+}
+
+
+.tab-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 1;
+  transition: color 0.3s;
+}
+
+.tab-button.active {
+    color: var(--background-dark);
+    font-weight: 500;
+}
+.light-mode .tab-button.active {
+    color: var(--text-light);
+}
+
+.note-content-wrapper {
+  flex-grow: 1;
+  background-color: var(--primary-dark);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.light-mode .note-content-wrapper {
+  background-color: var(--primary-light);
+}
+
+
+.note-content {
+  display: none;
+  height: 100%;
+  outline: none;
+}
+
+.note-content.active {
+  display: block;
+}
+
+.recording-interface {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: var(--primary-dark);
+  border-left: 1px solid var(--border-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  transition: background-color 0.3s;
+}
+.recording-interface.is-live {
+    background-color: var(--secondary-dark);
+}
+
+.light-mode .recording-interface {
+  background-color: var(--primary-light);
+  border-left: 1px solid var(--border-light);
+}
+
+.light-mode .recording-interface.is-live {
+    background-color: var(--secondary-light);
+}
+
+.status-indicator {
+    height: 80px; /* match canvas height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-text {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+.light-mode .status-text {
+    color: var(--text-light);
+}
+
+.live-recording-title {
+    font-weight: 500;
+    font-size: 1rem;
+    height: 24px;
+}
+canvas {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.live-recording-timer {
+    font-size: 1.2rem;
+    font-family: monospace;
+    height: 24px;
+}
+
+.recording-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.action-button {
+  background: var(--secondary-dark);
+  border: 1px solid var(--border-dark);
+  color: var(--text-dark);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.action-button:hover {
+    background-color: #4a4a4a;
+}
+.light-mode .action-button {
+  background: var(--secondary-light);
+  border: 1px solid var(--border-light);
+  color: var(--text-light);
+}
+.light-mode .action-button:hover {
+    background-color: #d0d0d0;
+}
+
+
+.record-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-recording);
+  border: 4px solid var(--secondary-dark);
+  box-shadow: 0 0 15px rgba(255, 59, 48, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+.record-button-inner {
+    color: white;
+    font-size: 2rem;
+}
+.record-button .record-text {
+    display: none;
+}
+.record-button.recording {
+    animation: pulse 1.5s infinite;
+}
+.record-button .record-waves {
+    display: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 20px rgba(255, 59, 48, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 59, 48, 0);
+  }
+}
+
+#polishedNote h1, #polishedNote h2, #polishedNote h3 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+#polishedNote p {
+    margin-bottom: 0.5em;
+    line-height: 1.6;
+}
+#polishedNote ul, #polishedNote ol {
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+#polishedNote li {
+    margin-bottom: 0.25em;
+} 
