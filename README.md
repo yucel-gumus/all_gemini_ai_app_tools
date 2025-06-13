@@ -36,6 +36,20 @@ A modern web application that provides AI-powered tools for learning and develop
 - Interactive slideshow format
 - Educational and entertaining content
 
+### Co-Drawing
+- Collaborative drawing with AI assistance
+- Real-time canvas drawing interface
+- AI-enhanced artwork generation
+- Touch and mouse support
+- Color picker and drawing tools
+
+### Maps Explorer
+- AI-powered travel recommendations
+- Interactive world map with Leaflet
+- Discover unique and fascinating places
+- Turkish language travel guide
+- Preset categories for exploration
+
 ## Tech Stack
 
 - React 18
@@ -45,6 +59,7 @@ A modern web application that provides AI-powered tools for learning and develop
 - React Router
 - Google Gemini AI API
 - Lucide Icons
+- Leaflet (for interactive maps)
 
 ## Getting Started
 
@@ -95,6 +110,12 @@ my-app/
 │   │   ├── tinycats/
 │   │   │   ├── TinyCats.tsx
 │   │   │   └── TinyCats.css
+│   │   ├── codrawing/
+│   │   │   ├── CoDrawing.tsx
+│   │   │   └── CoDrawing.css
+│   │   ├── mapsexplorer/
+│   │   │   ├── MapsExplorer.tsx
+│   │   │   └── MapsExplorer.css
 │   │   └── Navbar.tsx
 │   ├── App.tsx
 │   └── main.tsx

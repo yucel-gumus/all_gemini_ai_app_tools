@@ -1,0 +1,337 @@
+.codrawing-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.codrawing-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 12px 128px 12px;
+}
+
+@media (min-width: 640px) {
+  .codrawing-main {
+    padding: 40px 24px 128px 24px;
+  }
+}
+
+.codrawing-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .codrawing-header {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+}
+
+.codrawing-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .codrawing-title {
+    font-size: 1.875rem;
+  }
+}
+
+.codrawing-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+@media (min-width: 640px) {
+  .codrawing-subtitle {
+    font-size: 1rem;
+  }
+}
+
+.codrawing-link {
+  text-decoration: underline;
+  color: #0d6efd;
+}
+
+.codrawing-link:hover {
+  color: #0a58ca;
+}
+
+.codrawing-toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #dee2e6;
+  border-radius: 9999px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+}
+
+@media (min-width: 640px) {
+  .codrawing-toolbar {
+    align-self: auto;
+  }
+}
+
+.codrawing-color-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.codrawing-color-button:hover {
+  transform: scale(1.1);
+}
+
+.codrawing-color-input {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+.codrawing-clear-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.codrawing-clear-button:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.1);
+}
+
+.codrawing-canvas-container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.codrawing-canvas {
+  border: 2px solid #000000;
+  width: 100%;
+  cursor: crosshair;
+  height: 30vh;
+  min-height: 320px;
+  background-color: rgba(255, 255, 255, 0.9);
+  touch-action: none;
+}
+
+@media (min-width: 640px) {
+  .codrawing-canvas {
+    height: 60vh;
+  }
+}
+
+.codrawing-form {
+  width: 100%;
+}
+
+.codrawing-input-container {
+  position: relative;
+}
+
+.codrawing-input {
+  width: 100%;
+  padding: 12px 48px 12px 20px;
+  border: 2px solid #000000;
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+  margin-top: 8px;
+  font-size: 0.875rem;
+  background-color: white;
+  color: #495057;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .codrawing-input {
+    padding: 16px 56px 16px 20px;
+    font-size: 1rem;
+  }
+}
+
+.codrawing-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.codrawing-submit-button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 8px;
+  border-radius: 0;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  .codrawing-submit-button {
+    right: 16px;
+    padding: 8px;
+  }
+}
+
+.codrawing-submit-button:hover:not(:disabled) {
+  background-color: #343a40;
+}
+
+.codrawing-submit-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.codrawing-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 16px;
+}
+
+.codrawing-modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  max-width: 448px;
+  width: 100%;
+  padding: 24px;
+}
+
+.codrawing-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.codrawing-modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+.codrawing-modal-close {
+  color: #6c757d;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.codrawing-modal-close:hover {
+  color: #495057;
+}
+
+.codrawing-modal-content {
+  font-weight: 500;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .codrawing-container {
+    background-color: #212529;
+    color: #f8f9fa;
+  }
+  
+  .codrawing-subtitle {
+    color: #adb5bd;
+  }
+  
+  .codrawing-link {
+    color: #66b2ff;
+  }
+  
+  .codrawing-link:hover {
+    color: #4da3ff;
+  }
+  
+  .codrawing-toolbar {
+    background-color: #495057;
+  }
+  
+  .codrawing-clear-button {
+    background-color: #343a40;
+    color: #f8f9fa;
+  }
+  
+  .codrawing-clear-button:hover {
+    background-color: #495057;
+  }
+  
+  .codrawing-input {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #495057;
+  }
+  
+  .codrawing-input:focus {
+    border-color: #66b2ff;
+  }
+  
+  .codrawing-modal {
+    background-color: #343a40;
+  }
+  
+  .codrawing-modal-title {
+    color: #f8f9fa;
+  }
+  
+  .codrawing-modal-content {
+    color: #adb5bd;
+  }
+  
+  .codrawing-modal-close {
+    color: #adb5bd;
+  }
+  
+  .codrawing-modal-close:hover {
+    color: #f8f9fa;
+  }
+} 
