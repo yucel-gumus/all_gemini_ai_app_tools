@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Bu proje, okunabilirlik, yeniden kullanılabilirlik ve test edilebilirlik esas alınarak geliştirilecektir. Proje boyunca dosya yapısı tutarlı ve anlamlı olacak, her bileşen (component), modül veya sınıf kendi sorumluluğuna göre ayrı dosyalarda tanımlanacaktır. Kodlar DRY (Don't Repeat Yourself) ve KISS (Keep It Simple, Stupid) prensiplerine göre yazılacaktır. Proje çapında TypeScript (veya Python gibi mevcut dil) kullanılacaksa, type safety / tip kontrolü kesinlikle ihmal edilmeyecek, her fonksiyonun tipi açıkça belirtilecektir. Testler (unit/integration) yazılması zorunludur. Yeni eklenen her modül, proje genel yapısıyla uyumlu olmalı, gereksiz bağımlılıklardan kaçınılmalıdır. Kod yalnızca işlevsel değil, sürdürülebilir olacak şekilde yazılmalıdır.

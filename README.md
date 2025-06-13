@@ -18,6 +18,24 @@ A modern web application that provides AI-powered tools for learning and develop
 - Sample images available
 - Advanced settings for customization
 
+### Magic GIF Maker
+- Create animated GIFs from text descriptions
+- AI-powered image generation
+- Customizable animation settings
+- Download generated GIFs
+
+### Dictation App
+- Voice-to-text transcription
+- AI-powered text enhancement
+- Real-time recording
+- Export transcribed notes
+
+### Tiny Cats Explainer
+- Explain complex topics using fun cat metaphors
+- AI-generated illustrations for each explanation
+- Interactive slideshow format
+- Educational and entertaining content
+
 ## Tech Stack
 
 - React 18
@@ -41,10 +59,15 @@ cd my-app
 npm install
 ```
 
-3. Create a `.env.local` file in the root directory and add your Google Gemini API key:
+3. Create a `.env.local` file in the root directory and add your API keys:
 ```env
-VITE_GEMINI_API_KEY=your_api_key_here
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+VITE_GOOGLE_AI_API_KEY=your_google_ai_api_key_here
 ```
+
+Note: 
+- Get your Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+- The Google AI API key is specifically needed for the Tiny Cats Explainer feature
 
 4. Start the development server:
 ```bash
@@ -65,6 +88,13 @@ my-app/
 │   │   │   ├── ImageToCode.tsx
 │   │   │   ├── CodePreview.tsx
 │   │   │   └── ErrorModal.tsx
+│   │   ├── magicgif/
+│   │   │   └── magicGif.tsx
+│   │   ├── dictation/
+│   │   │   └── DictationApp.tsx
+│   │   ├── tinycats/
+│   │   │   ├── TinyCats.tsx
+│   │   │   └── TinyCats.css
 │   │   └── Navbar.tsx
 │   ├── App.tsx
 │   └── main.tsx

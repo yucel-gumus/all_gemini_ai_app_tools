@@ -5,6 +5,7 @@ import FlashcardMaker from './components/flashcard/FlashcardMaker';
 import ImageToCode from './components/imagetocode/ImageToCode';
 import MagicGif from './components/magicgif/magicGif';
 import DictationApp from './components/dictation/DictationApp';
+import TinyCats from './components/tinycats/TinyCats';
 import './App.css';
 
 const App: React.FC = () => {
@@ -50,6 +51,13 @@ const App: React.FC = () => {
                     Get Started
                   </Link>
                 </div>
+                <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                  <h2 className="text-2xl font-semibold text-gray-900 mb-2">Tiny Cats Explainer</h2>
+                  <p className="text-gray-600 mb-4">Explain complex topics using fun stories about lots of tiny cats with AI-generated illustrations.</p>
+                  <Link to="/tinycats" className="inline-block bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors">
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
           } />
@@ -57,6 +65,7 @@ const App: React.FC = () => {
           <Route path="/imagetocode" element={<ImageToCode />} />
           <Route path="/magicgif" element={<MagicGif />} />
           <Route path="/dictation" element={<DictationApp />} />
+          <Route path="/tinycats" element={<TinyCats />} />
         </Routes>
       </main>
     </div>
